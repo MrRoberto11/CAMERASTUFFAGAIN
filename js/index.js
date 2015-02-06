@@ -8,14 +8,14 @@ function onDeviceReady() {
 }
 
 function capturePhoto() {
-	navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+	navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 100,
 	destinationType: destinationType.DATA_URL });
 }
 	
 function onPhotoDataSuccess(imageData) {
 	var image = document.getElementById('image');
 	image.style.display = 'block';
-	image.src = "data:image/jpeg;base64," + imageData;
+	image.src = "data:image/png;base64," + imageData;
 }
 
 function onFail(message) {
